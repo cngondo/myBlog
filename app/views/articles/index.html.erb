@@ -1,15 +1,51 @@
-<h1>Articles#index</h1>
+<div class="menu">
+  <!-- Right aligned menu below button -->
+  <!-- <button id="demo-menu-lower-right"
+          class="mdl-button mdl-js-button mdl-button--icon">
+    <i class="material-icons">more_vert</i>
+  </button>
 
-<%= link_to "Create a new article", new_article_path %>
-<br />
+  <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+      for="demo-menu-lower-right">
+    <li class="mdl-menu__item">Some Action</li>
+    <li class="mdl-menu__item">Another Action</li>
+    <li disabled class="mdl-menu__item">Disabled Action</li>
+    <li class="mdl-menu__item">Yet Another Action</li>
+  </ul> -->
+</div>
+<!-- THE POSTS -->
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--col-1-col">
+      <br />
+    </div>
+    <div class="mdl-cell--align-center mdl-cell--col-10-col">
+      <h1>My Tech Blog</h1>
+        <% link_to "Create a new article", new_article_path %>
+      <br />
 
-<div class="article">
-  <% @articles.each do |article| %>
-    <h4>
-      <%= link_to article.title, article_path(article) %>
-    </h4>
-    <p>
-      <%= article.body %>
-    </p>
-  <% end %>
+      <% @articles.each do |article| %>
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">
+              <%= link_to article.title, article_path(article) %>
+            </h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <%= truncate article.body, length: 100 %>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <%= link_to "Read More", article, class:"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" %>
+          </div>
+          <!-- <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div> -->
+        </div>
+        <br />
+      <% end %>
+  </div>
+    <div class="mdl-cell mdl-cell--col-1-col">
+      <br />
+    </div>
 </div>
