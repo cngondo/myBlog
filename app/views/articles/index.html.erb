@@ -15,38 +15,36 @@
 </div>
 <!-- THE POSTS -->
 <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--col-1-col">
+    <div class="mdl-cell mdl-cell--2-col">
       <br />
     </div>
-    <div class="mdl-cell--align-center mdl-cell--col-10-col">
-      <h1 class="source">My Tech Blog</h1>
-        <% link_to "Create a new article", new_article_path %>
-      <br />
-
-      <% @articles.each do |article| %>
-        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-          <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">
+    <div class="mdl-cell--align-center mdl-cell--8-col">
+        <h1 class="robotoslab">Hi there, I'm Cornellius</h1>
+          <% link_to "Create a new article", new_article_path %>
+        <br>
+        <% @articles.each do |article| %>
+           <div class="mdl-grid">
+          <!-- SHOW TIME OF CREATED POST   -->
+           <div class="mdl-cell mdl-cell--2-col">
+             <%= article.created_at.strftime("%d") %>
+             <br>
+              <%= article.created_at.strftime("%b  %Y") %>
+           </div>
+           <div class="mdl-cell mdl-cell--10-col">
               <%= link_to markdown(article.title), article_path(article) %>
-            </h2>
+              <br>
+              <%= truncate markdown(article.body), length: 250 %>
+              <br>
+              <%= link_to "Read More", article, class:"mdl-button mdl-button--colored
+                                                          mdl-js-button mdl-js-ripple-effect" %>
+              <br>
+
+           </div>
           </div>
-          <div class="mdl-card__supporting-text">
-            <%= truncate markdown(article.body), length: 250 %>
-          </div>
-          <div class="mdl-card__actions mdl-card--border">
-            <%= link_to "Read More", article, class:"mdl-button mdl-button--colored
-                                                      mdl-js-button mdl-js-ripple-effect" %>
-          </div>
-          <!-- <div class="mdl-card__menu">
-            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-              <i class="material-icons">share</i>
-            </button>
-          </div> -->
-        </div>
-        <br />
-      <% end %>
-  </div>
-    <div class="mdl-cell mdl-cell--col-1-col">
+          <hr>
+        <% end %>
+    </div>
+    <div class="mdl-cell mdl-cell--2-col">
       <br />
     </div>
 </div>

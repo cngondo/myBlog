@@ -26,38 +26,26 @@
     font-style: normal;
 }
 @font-face {
-  font-family:source sans;
+  font-family:'source sans';
   src:url(assets-path('fonts/SourceSansPro-Light.otf'));
 }
 @font-face {
-  font-family:titilium;
+  font-family:'titilium';
   src:url(assets-path('fonts/Titillium-Light.otf'));
 }
 .robotoslab{
-  font-family: roboto slab;
+  font-family: 'roboto slab';
 }
 .source{
-  font-family: source sans;
+  font-family: 'source sans';
 }
 
 a{
-  font-family: source sans;
+  font-family: 'source sans';
   text-decoration: none;
   transition: ease 1s;
   -webkit-transition: ease 1s;
 }
-// cards at article index
- .demo-card-wide.mdl-card {
-  width: 600px;
-}
-.demo-card-wide > .mdl-card__title {
-  height: 176px;
-  // background: url('../assets/demos/welcome_card.jpg') center / cover;
-}
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
-
 //styling for show page
 .bgshow{
   width: 100%;
