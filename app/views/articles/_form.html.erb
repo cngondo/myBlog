@@ -1,12 +1,16 @@
 <%= form_for(@article) do |f| %>
-  <p>
-    <%= f.label :title %> <br>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %> <br>
-    <%= f.text_area :body %>
-  </p>
+ <form action="#">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+       <%= f.text_field :title, class:"mdl-textfield__input", id: 'ttl' %>
+       <label for="ttl" class="mdl-textfield__label">Title</label>
+    </div>
+    <br>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%= f.text_area :body, class: 'mdl-textfield__input', id: 'txt' %>
+      <label for="txt" class="mdl-textfield__label">Your text here...</label>
+    </div>
   <br>
-  <%= f.submit %>
+  <%= f.submit 'UPDATE ARTICLE', :class => 'mdl-button mdl-button--colored
+                          mdl-js-button mdl-js-ripple-effect' %>
+ </form>
 <% end %>

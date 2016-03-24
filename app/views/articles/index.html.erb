@@ -18,9 +18,9 @@
     <div class="mdl-cell mdl-cell--2-col">
       <br />
     </div>
-    <div class="mdl-cell--align-center mdl-cell--8-col">
-        <h1 class="robotoslab">Hi there, I'm Cornellius</h1>
-          <% link_to "Create a new article", new_article_path %>
+    <div id="landingText" class="mdl-cell--align-center mdl-cell--8-col">
+        <h2>Hi there, I'm Cornellius</h2>
+          <%= link_to "Create a new article", new_article_path %>
         <br>
         <% @articles.each do |article| %>
            <div class="mdl-grid">
@@ -38,7 +38,6 @@
               <%= link_to "Read More", article, class:"mdl-button mdl-button--colored
                                                           mdl-js-button mdl-js-ripple-effect" %>
               <br>
-
            </div>
           </div>
           <hr>
