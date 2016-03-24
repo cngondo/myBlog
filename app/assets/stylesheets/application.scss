@@ -61,7 +61,6 @@ a{
   position: relative;
   z-index: 5;
 }
-
 .blogtext{
   margin: 0 auto;
   width: 60%;
@@ -85,3 +84,19 @@ a{
     padding: 5px;
   }
 }
+//form styling
+form{
+  width: 100% !important;
+  height: auto !important ;
+  overflow: auto !important;
+}
+#ttl{
+  width: 50em;
+  overflow: auto;
+}
+#txt{
+  width: 50em;
+  height: 80em;
+  overflow: auto;
+}
+

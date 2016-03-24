@@ -1,6 +1,15 @@
-<h1>Articles#new</h1>
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--2-col"><br></div>
+    <div class="mdl-cell mdl-cell--8-col">
+        <h1>New Article</h1>
+        <br>
+        <%= render partial: 'form' %>
+        <br>
+        <%= link_to "Back To Articles", articles_path,
+                                        class:'mdl-button mdl-button--colored
+                                            mdl-js-button mdl-js-ripple-effect' %>
+    </div>
+    <div class="mdl-cell mdl-cell--2-col"><br></div>
+</div>
 
-<%= render partial: 'form' %>
 
-<br />
-<%= link_to "Back To Articles", articles_path %>
