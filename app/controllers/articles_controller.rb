@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  helper ApplicationHelper
+  
   def index
     @articles = Article.all.order('created_at DESC')
   end

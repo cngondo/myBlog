@@ -10,6 +10,11 @@ gem 'sass-rails', '~> 5.0'
 gem 'material_design_lite-sass', '~> 1.0', '>= 1.0.6.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+# For github md recognition in blog text
+gem 'redcarpet'
+gem 'coderay'
+# for the simple form helper in rails
+gem 'simple_form'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
