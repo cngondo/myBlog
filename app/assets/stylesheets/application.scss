@@ -11,6 +11,7 @@
  * file per style scope.
  *
  */
+
  @import 'material';
 
  //custom fonts here
@@ -80,5 +81,15 @@ a{
 
   h1{
     text-align: center;
+  }
+}
+
+.links{
+  text-align: right;
+  display: inline-block;
+
+  li{
+    display: inline;
+    padding: 5px;
   }
 }
