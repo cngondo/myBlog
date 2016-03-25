@@ -11,8 +11,6 @@ gem 'material_design_lite-sass', '~> 1.0', '>= 1.0.6.3'
 gem 'material_design_icons_rails', '~> 1.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-#to pass large get URIs
-gem 'thin'
 # For github md recognition in blog text
 gem 'redcarpet'
 gem 'coderay'
