@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
-
-
+#for all environmental variables
+gem 'dotenv-rails', :groups => [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
+#for the github omnioath
+gem "omniauth-github", '1.1.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'material_design_lite-sass', '~> 1.0', '>= 1.0.6.3'
