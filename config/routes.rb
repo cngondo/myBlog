@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-
-
+#  get 'sessions/create'
+#
+#  get 'sessions/destroy'
+  resources :users
   resources :articles
 
     # get 'articles/new'
@@ -9,5 +11,8 @@ Rails.application.routes.draw do
 
     # get 'articles/destroy'
   root 'articles#index'
+  
+  get "/auth/:provider/callback" => "sessions#create"
+  get "/signout" => "sessions#destroy", :as => :signout
 
 end
