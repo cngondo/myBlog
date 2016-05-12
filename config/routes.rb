@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
 #  get 'sessions/create'
 #
 #  get 'sessions/destroy'
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
 
     # get 'articles/destroy'
   root 'articles#index'
-  
+
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
 

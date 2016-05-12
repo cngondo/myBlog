@@ -20,8 +20,12 @@
     </div>
     <div id="landingText" class="mdl-cell--align-center mdl-cell--8-col">
         <h2>Hi there, I'm Cornellius</h2>
+        <% if current_user == "cngondo" %>
           <%= link_to "Create a new article", new_article_path %>
+        <% else %>
         <br>
+          <%= link_to "Login with Github", "/auth/github" %>
+        <% end %>
         <% @articles.each do |article| %>
            <div class="mdl-grid">
           <!-- SHOW TIME OF CREATED POST   -->
