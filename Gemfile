@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.2.3'
-#for all environmental variables
-gem 'dotenv-rails', :groups => [:development, :test]
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
+#for all environmental variables
+gem 'dotenv-rails', :require => 'dotenv/rails-now', :groups => [:development, :test]
 # Use postgresql as the database for Active Record
 gem 'pg'
 #for the github omnioath
