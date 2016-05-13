@@ -16,7 +16,7 @@
       <h1><%= markdown(@article.title) %></h1>
     </div>
 
-    <p><%= markdown(@article.body) %></p>   
+    <p><%= markdown(@article.body) %></p>
     <br >
     <div class="links" align="right">
       <li>
@@ -25,12 +25,12 @@
         <% end %>
       </li>
       <li>
-        <%= link_to edit_article_path(@article) do %>
+        <% link_to edit_article_path(@article) do %>
           <img src="/assets/edit_post.png">
         <% end %>
       </li>
       <li>
-        <%= link_to article_path(@article), method: :delete,
+        <% link_to article_path(@article), method: :delete,
         data: {confirm: "Are you sure you want to delete this article?"} do %>
           <img src="/assets/del.png">
         <% end %>

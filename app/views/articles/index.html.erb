@@ -19,13 +19,10 @@
       <br />
     </div>
     <div id="landingText" class="mdl-cell--align-center mdl-cell--8-col">
-        <h2>Hi there, I'm Cornellius</h2>
-        <% if current_user == "cngondo" %>
-          <%= link_to "Create a new article", new_article_path %>
-        <% else %>
+        <h2>Hi there, <a href="http://cngondo.github.io/" target="_blank">I'm Cornellius</a></h2>
+          <% link_to "Create a new article", new_article_path %>
         <br>
-          <%= link_to "Login with Github", "/auth/github" %>
-        <% end %>
+          <% link_to "Login with Github", "/auth/github" %>
         <% @articles.each do |article| %>
            <div class="mdl-grid">
           <!-- SHOW TIME OF CREATED POST   -->
@@ -37,7 +34,7 @@
            <div class="mdl-cell mdl-cell--10-col">
              <h1><%=raw link_to markdown(article.title), article_path(article) %></h1>
               <br>
-             <p><%=sanitize truncate markdown(article.body), length: 250, :tags => "h5, div, span" %></p>
+             <p><%=sanitize truncate markdown(article.body), length: 250, :tags => "h5, div, span, p, em" %></p>
               <br>
               <%= link_to "Read More", article, class:"mdl-button mdl-button--colored
                                                           mdl-js-button mdl-js-ripple-effect" %>
